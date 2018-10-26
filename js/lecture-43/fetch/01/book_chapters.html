@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- reset browser defaults by bootstrap reboot.min.css file -->
+  <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Book Chapters 87, 88 and 89</title>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="index.html">Send Data through Javascript</a></li>
+      <li class="list-inline-item"><a href="advanced_fields.html">Advanced Fields</a></li>
+    </ul>
+
+    <h2>Book Chapters 87, 88 and 89</h2>
+    <button id="hello">Say Hello!</button>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- Bundled JS files (bootstrap.bundle.js and minified bootstrap.bundle.min.js) include Popper, but not jQuery. -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // -----------Chapter 87 (try and catch)------------
+      // // syntax
+      // try {
+      //   // Some dangerous Code which might fail to execute
+      // } catch(err) {
+      //   // handle error if occured in try block
+      // }
+
+      // function greetUser() {
+      //   aler('Hello');
+      // }
+
+      function greetUser() {
+        try {
+          aler('Hello');
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      // greetUser();
+
+      // ----------------Chapter 88 (throw)--------------
+      // we can throw our own error by using "throw" keyword
+      var password = "1232 3123123";
+      try {
+        if (password.length < 8) {
+          throw "Password must be atleast 8 characters long";
+        }
+
+        if (password.indexOf(" ") !== -1) {
+          throw "No spaces are available in password";
+        }
+      } catch (err) {
+        alert(err);
+      }
+
+      // ----------------Chapter 89 (Handling Events with Javascript)--------------
+      var helloBtn = document.getElementById('hello');
+      helloBtn.addEventListener('click', greetUser);
+      // helloBtn.onclick = helloUser;
+
+      function helloUser() {
+        alert('Hello!');
+      }
+    </script>
+</body>
+
+</html>

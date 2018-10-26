@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- reset browser defaults by bootstrap reboot.min.css file -->
+  <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Advanced Fields</title>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="index.html">Send Data through Javascript</a></li>
+      <li class="list-inline-item"><a href="advanced_fields.html">Advanced Fields</a></li>
+    </ul>
+
+    <h2>Advanced Fields</h2>
+    <p>
+      Please check <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Reference
+        Page</a> for better understanding of these fields.
+    </p>
+
+    <form id="advancdForm" action="" method="get">
+      <div class="form-group">
+        <p>
+          Age=> Type:number; minimum: 1; max: 60; step: 2;
+        </p>
+        <input class="form-control" type="number" placeholder="Age" name="age" id="age" min="1" max="60" step="2">
+      </div>
+
+      <div class="form-group">
+        <p>
+          <label for="myFruit">What's your favorite fruit?</label>
+        </p>
+        <input type="text" class="form-control" name="myFruit" placeholder="Fruit" id="myFruit" list="mySuggestion">
+        <datalist id="mySuggestion">
+          <option>Apple</option>
+          <option>Banana</option>
+          <option>Blackberry</option>
+          <option>Blueberry</option>
+          <option>Lemon</option>
+          <option>Lychee</option>
+          <option>Peach</option>
+          <option>Pear</option>
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <p>
+          Text(Constraint)=> Type:text; regex=[a-zA-Z ]+; i.e alphabets or spaces only.
+        </p>
+        <input class="form-control" type="text" placeholder="Enter Name (a-z A-Z or space only)" pattern="[a-zA-Z ]+"
+          name="age" id="age" min="1" max="60" step="2">
+      </div>
+
+      <div class="form-group">
+        <p>
+          Range=> type: range; min: 0; max:500; step: 10;
+        </p>
+        <input type="range" class="form-control" name="range" id="beans" min="0" max="500" step="10">
+      </div>
+
+      <div class="form-group">
+        <p>
+          DateTimeLocal => type: datetime-local;
+        </p>
+        <input class="form-control" type="datetime-local" name="datetime" id="datetime">
+      </div>
+
+      <div class="form-group">
+        <p>
+          Date => type: datetime;
+        </p>
+        <input class="form-control" type="date" name="datetime" id="datetime">
+      </div>
+
+      <div class="form-group">
+        <p>
+          Month => type: month;
+        </p>
+        <input class="form-control" type="month" name="month" id="datetime">
+      </div>
+
+      <div class="form-group">
+        <p>
+          Week => type: datetime-local;
+        </p>
+        <input class="form-control" type="week" name="week" id="datetime">
+      </div>
+
+      <div class="form-group">
+        <p>
+          Color: type:color;
+        </p>
+        <input type="color" name="color" id="color">
+      </div>
+      <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Send Data">
+      </div>
+    </form>
+
+
+    <h2>Progress</h2>
+    <div class="form-group">
+      <p>
+        Progress:
+      </p>
+      <progress max="100" value="75" id="progress">75/100</progress>
+    </div>
+
+    <h2>Meter</h2>
+
+    <div class="form-group">
+      <p>
+        Meter:
+      </p>
+      <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+    </div>
+
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <!-- Bundled JS files (bootstrap.bundle.js and minified bootstrap.bundle.min.js) include Popper, but not jQuery. -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
+
+  <script>
+    var progress = document.getElementById('progress');
+    setInterval(function () {
+      var val = progress.value;
+      if (val >= progress.max) {
+        progress.value = 0;
+      } else {
+        progress.value += 1;
+      }
+    }, 50);
+  </script>
+</body>
+
+</html>

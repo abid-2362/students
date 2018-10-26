@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- reset browser defaults by bootstrap reboot.min.css file -->
+  <link rel="stylesheet" href="assets/css/bootstrap-reboot.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Sending Form Data through Javascript</title>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="index.html">Send Data through Javascript</a></li>
+      <li class="list-inline-item"><a href="advanced_fields.html">Advanced Fields</a></li>
+    </ul>
+
+    <h2>Sending Form Data through Javascript</h2>
+    <form id="myForm">
+      <div class="form-group">
+        <input id="title" type="text" class="form-control" placeholder="Title" name="title" required>
+      </div>
+      <div class="form-group">
+        <input id="body" type="text" class="form-control" placeholder="Body" name="body" required>
+      </div>
+      <!-- <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" name="password" required>
+        </div> -->
+      <div class="form-group">
+        <input class="btn btn-success" type="submit" value="Send Data">
+      </div>
+    </form>
+
+    <div id="response"></div>
+  </div>
+
+  <script type="text/template" id="responseTemplate">
+    <p>ID: {{ID}}</p>
+    <p>Title: {{title}}</p>
+    <p>Body: {{body}}</p>
+    <p>UserId: {{userId}}</p>
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <!-- Bundled JS files (bootstrap.bundle.js and minified bootstrap.bundle.min.js) include Popper, but not jQuery. -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
